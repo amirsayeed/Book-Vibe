@@ -3,9 +3,9 @@ import { NavLink } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-                    <li><NavLink to='/'>Home</NavLink></li>
-                    <li><NavLink to='/listedBooks'>Listed Books</NavLink></li>
-                    <li><a>Pages to Read</a></li>
+                    <li className='text-lg'><NavLink className={({isActive})=> (isActive? 'text-indigo-400' :'')} to='/'>Home</NavLink></li>
+                    <li className='text-lg'><NavLink className={({isActive})=> (isActive? 'text-indigo-400' :'')} to='/listedBooks'>Listed Books</NavLink></li>
+                    <li className='text-lg'><NavLink className={({isActive})=> (isActive? 'text-indigo-400' :'')} to='/pagesDashboard' >Pages to Read</NavLink></li>
                   </>
     return (
         <div className="navbar bg-base-100">
@@ -20,7 +20,7 @@ const Navbar = () => {
                     {links}
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Book Vibe</a>
+                <a className="btn btn-ghost text-2xl">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
